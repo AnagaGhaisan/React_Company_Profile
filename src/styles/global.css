@@ -1,0 +1,103 @@
+:root{
+  --primary: #0d6efd;
+  --dark-bg: #0b1220;
+  --glass: rgba(255,255,255,0.06);
+}
+
+/* Basic resets */
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #0b1220 0%, #071226 100%);
+  color: #e9eef8;
+  margin: 0;
+}
+
+/* Navbar */
+.app-navbar {
+  transition: background-color 0.3s, box-shadow 0.3s;
+  background: transparent;
+}
+.app-navbar.scrolled {
+  background: rgba(7, 10, 20, 0.9);
+  box-shadow: 0 6px 22px rgba(2, 6, 23, 0.6);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(90deg, rgba(10,25,50,0.75), rgba(0,10,30,0.55)), url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=60");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+}
+
+/* Section spacing */
+section {
+  position: relative;
+  padding: 80px 0;
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+}
+
+/* Client logos */
+.client-logo {
+  filter: grayscale(1) opacity(0.85);
+  transition: filter 0.3s, transform 0.3s;
+}
+.client-logo:hover {
+  filter: none;
+  transform: translateY(-6px);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary), #0069f0);
+  border: none;
+}
+
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  width: auto;            /* tombol ga terlalu lebar */
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.custom-carousel .carousel-control-prev:hover,
+.custom-carousel .carousel-control-next:hover {
+  opacity: 1;
+}
+
+.custom-carousel .carousel-control-prev {
+  left: -30px;            /* keluar sedikit di layar kecil */
+}
+
+.custom-carousel .carousel-control-next {
+  right: -30px;
+}
+
+/* Tablet & Desktop */
+@media (min-width: 768px) {
+  .custom-carousel .carousel-control-prev {
+    left: -50px;
+  }
+  .custom-carousel .carousel-control-next {
+    right: -50px;
+  }
+}
+
