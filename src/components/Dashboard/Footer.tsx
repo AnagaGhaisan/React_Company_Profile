@@ -1,5 +1,5 @@
 import React from "react";
-import { FacebookIcon, TwitterIcon, LinkedinIcon } from "../icons";
+import { FacebookIcon, TwitterIcon, LinkedinIcon } from "../../icons";
 
 const socialLinks = [
   { href: "https://facebook.com", Icon: FacebookIcon, color: "#3b5998" },

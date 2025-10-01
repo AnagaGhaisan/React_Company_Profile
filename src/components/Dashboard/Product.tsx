@@ -1,13 +1,29 @@
 import React from "react";
 import ProductComponent from "./ProductComponent";
-import { CloudIcon, ChartIcon, LockIcon} from "../icons"; 
+import { CloudIcon, ChartIcon, LockIcon } from "../../icons";
 import AnimatedWrapper from "./AnimatedWrapper";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const products = [
-  { Icon: CloudIcon, title: "Digital Monitoring Tools", desc: "Pantau percakapan digital untuk memahami tren & opini pelanggan." },
-  { Icon: LockIcon, title: "WhatsApp Business API", desc: "Layanan WhatsApp resmi untuk bisnis dengan fitur lengkap." },
-  { Icon: ChartIcon, title: "Comprehensive Analytics", desc: "Analisis big data untuk insight yang lebih akurat & strategis." },
+  {
+    Icon: CloudIcon,
+    title: "Ripple10",
+    desc: "Digital Monitoring Tools untuk memantau percakapan digital, tren, dan opini pelanggan secara real-time.",
+    link: "/product/ripple10",
+  },
+  {
+    Icon: LockIcon,
+    title: "Sociomile",
+    desc: "WhatsApp Business API resmi dengan fitur lengkap untuk meningkatkan engagement pelanggan.",
+    link: "/product/sociomile",
+  },
+  {
+    Icon: ChartIcon,
+    title: "Sociomation",
+    desc: "Comprehensive Analytics dan automation untuk insight bisnis yang lebih akurat & strategis.",
+    link: "/product/sociomation",
+  },
 ];
 
 export default function ProductsSection() {
@@ -16,7 +32,10 @@ export default function ProductsSection() {
       <div className="container">
         {/* Heading */}
         <AnimatedWrapper>
-          <h2 style={{ color: 'rgba(2,6,23,0.6)' }} className="text-center fw-bold mb-3">
+          <h2
+            style={{ color: "rgba(2,6,23,0.6)" }}
+            className="text-center fw-bold mb-3"
+          >
             Produk Kami
           </h2>
           <p className="text-center text-muted mb-5">
@@ -26,7 +45,7 @@ export default function ProductsSection() {
 
         {/* Product Grid */}
         <div className="row g-4">
-          {products.map(({ Icon, title, desc }, idx) => (
+          {products.map(({ Icon, title, desc, link }, idx) => (
             <div className="col-md-6 col-lg-4" key={idx}>
               <motion.div
                 whileHover={{
@@ -37,7 +56,12 @@ export default function ProductsSection() {
                 transition={{ type: "spring", stiffness: 200 }}
               >
                 <AnimatedWrapper delay={idx * 0.15}>
-                  <ProductComponent Icon={Icon} title={title} desc={desc} />
+                  <Link
+                    to={link}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <ProductComponent Icon={Icon} title={title} desc={desc} />
+                  </Link>
                 </AnimatedWrapper>
               </motion.div>
             </div>

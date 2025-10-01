@@ -101,3 +101,64 @@ section {
   }
 }
 
+/* Paksa background dropdown selalu jelas */
+/* Default putih */
+.text-default {
+  color: #ffffff !important;
+}
+.text-default-scrolled {
+  color: #ffffff !important; /* tetap putih */
+}
+
+/* Ripple10 */
+.text-ripple10 {
+  color: #071226 !important; /* hitam */
+}
+.text-ripple10-scrolled {
+  color: #ffffff !important; /* putih waktu discroll */
+}
+
+/* Sociomile */
+.text-sociomile {
+  color: #071226 !important;
+}
+.text-sociomile-scrolled {
+  color: #ffffff !important;
+}
+
+/* Sociomation */
+.text-sociomation {
+  color: #071226 !important;
+}
+.text-sociomation-scrolled {
+  color: #ffffff !important;
+}
+
+/* Dropdown background tetap putih */
+.custom-dropdown .dropdown-menu {
+  background-color: #ffffff !important;
+  border: none;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+}
+
+.custom-dropdown .dropdown-item {
+  background: transparent !important;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover efek */
+.custom-dropdown .dropdown-item:hover {
+  background-color: rgba(0,0,0,0.05) !important;
+}
+
+/* Supaya tulisan dropdown ikut warna varian */
+.custom-dropdown .dropdown-item-custom {
+  color: black !important; /* default */
+}
+
+
+
+
+
+
+
